@@ -1,0 +1,7 @@
+{
+    "appId": "com.AyushRajniwal.BaseApp",
+    "appName": "Base Setup",
+    "webDir": "build",
+    "bundledWebRuntime": false,
+    "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh"
+}

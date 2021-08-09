@@ -1,0 +1,7 @@
+{
+  "name": "MoneyLit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
