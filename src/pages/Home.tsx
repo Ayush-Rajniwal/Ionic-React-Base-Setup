@@ -1,4 +1,5 @@
 import type { SQLiteDBConnection } from "@capacitor-community/sqlite";
+import { Plugin } from "@capacitor/core";
 import {
 	IonContent,
 	IonHeader,
@@ -6,39 +7,41 @@ import {
 	IonTitle,
 	IonToolbar,
 } from "@ionic/react";
+import { star } from 'ionicons/icons';
 import { useEffect } from "react";
 
-import ExploreContainer from "../components/ExploreContainer";
 import { sqlite } from "../services/storage/storage";
-
+import { Button } from "../widgets/Button";
+import { Card } from "../widgets/Card";
+import { Container } from "../widgets/Container";
 import "./Home.css";
 
 const Home: React.FC = () => {
-	useEffect(() => {
-		const testDB = async () => {
-			const db: SQLiteDBConnection = await sqlite.createConnection("myDB");
-			await db.open();
-			await sqlite.closeConnection("myDB");
-		}
-		testDB();
-	})
+	console.log(Plugin, "SMSReceive");
+
+	// useEffect(() => {
+	// 	const testDB = async () => {
+	// 		const db: SQLiteDBConnection = await sqlite.createConnection("myDB");
+	// 		await db.open();
+	// 		await sqlite.closeConnection("myDB");
+	// 	}
+	// 	testDB();
+	// })
 
 	return (
-		<IonPage>
-			<IonHeader>
+		<Container>
+			{/* <IonHeader>
 				<IonToolbar>
 					<IonTitle>Blank</IonTitle>
 				</IonToolbar>
-			</IonHeader>
-			<IonContent fullscreen>
-				<IonHeader collapse="condense">
-					<IonToolbar>
-						<IonTitle size="large">Blank</IonTitle>
-					</IonToolbar>
-				</IonHeader>
-				<ExploreContainer />
+			</IonHeader> */}
+			<IonContent className="ion-padding" fullscreen>
+				<h1>Home</h1>
+				<div className="card__holder">
+					<Card amount="67000" digits="1234" name="Ayush" onClick={() => console.log("Card clicked")} />
+				</div>
 			</IonContent>
-		</IonPage>
+		</Container>
 	);
 };
 

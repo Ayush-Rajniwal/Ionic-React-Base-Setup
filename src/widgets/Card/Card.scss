@@ -1,0 +1,37 @@
+.card {
+    min-height: 188px;
+    border-radius: 25px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+    box-shadow: 0px 1px 14px #19282F;
+    padding: 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__amount {
+        // margin: 20px 0 0 20px;
+        &--value {
+            font-size: 32px;
+        }
+
+        &--placeholder {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    }
+
+    &__number {
+        font-size: 18px;
+        &--unmasked {
+            margin: 0 0 0 10px;
+        }
+    }
+}

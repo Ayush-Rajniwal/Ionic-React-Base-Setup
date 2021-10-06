@@ -31,7 +31,7 @@ import "./theme/variables.css";
 const App: React.FC = () => {
 	useStorage();
 	// Notification();
-	PushNotificationService();
+	// PushNotificationService();
 	capCongif.addListener("appStateChange", ({ isActive }) => {
 		console.log("App state changed. Is active?", isActive);
 	});
